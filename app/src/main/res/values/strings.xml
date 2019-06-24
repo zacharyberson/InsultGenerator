@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Insult Generator</string>
+    <string name="insultHint">Press Generate to create insult.</string>
+    <string name="button_generate">Generate</string>
+    <string name="button_stop">STOP</string>
+    <string name="checkAutoClipboard">Auto-Copy to Clipboard</string>
+    <string name="textInterval">Interval:</string>
+    <string name="checkAutoGen">Auto-Generate</string>
+    <string name="intervalHint">(sec)</string>
+    <string name="textWordBanks">Choose which word banks to include in insults.</string>
+    <string name="checkShakespeare">Shakespeare</string>
+    <string name="checkMix">Mix?</string>
+    <string name="copyHint">Copy to Clipboard</string>
+    <string name="copied">Copied to Clipboard</string>
+    <string name="genServiceStopped">Generator Service Stopped</string>
+    <string name="genServiceAutoStart">AutoGenerator Started</string>
+    <string name="genServiceInitialized">Generator Service Initialized</string>
+    <string name="channel_insult_name">Generated Insults</string>
+    <string name="channel_insult_description">This channel displays the Auto-Generated insults and is required for uninterrupted Auto-Generation.</string>
+    <string name="autogenerator_notification_message">Auto-Generator is Running…</string>
+    <string name="autogenerator_notification_name">Insult Auto-Generator</string>
+</resources>

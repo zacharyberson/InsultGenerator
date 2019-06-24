@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:clipChildren="false"
+        android:duplicateParentState="true"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textChooseBank"
+            android:layout_height="wrap_content"
+            style="@style/TextGeneral"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16sp"
+            android:gravity="center"
+            android:padding="8sp"
+            android:text="@string/textWordBanks"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/listWordBank"
+            android:layout_width="wrap_content"
+            android:layout_height="125sp"
+            android:layout_below="@id/textChooseBank"
+            android:layout_marginTop="8sp"
+            android:background="@color/transparentOffWhite"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textChooseBank">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingEnd="8sp"
+                    tools:ignore="RtlSymmetry">
+
+                    <CheckBox
+                        android:id="@+id/checkShakespeare"
+                        style="@style/CheckBoxBank"
+                        android:text="@string/checkShakespeare" />
+
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkAutoClipboard"
+            style="@style/CheckboxOption"
+            android:text="@string/checkAutoClipboard"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/checkAutoGenerate"
+            app:layout_constraintEnd_toStartOf="@+id/listWordBank"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/listWordBank"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <CheckBox
+            android:id="@+id/checkAutoGenerate"
+            style="@style/CheckboxOption"
+            android:text="@string/checkAutoGen"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textInterval"
+            app:layout_constraintEnd_toStartOf="@+id/listWordBank"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkAutoClipboard" />
+
+        <TextView
+            android:id="@+id/textInterval"
+            style="@style/TextGeneral"
+            android:layout_alignBaseline="@id/checkAutoGenerate"
+            android:layout_toStartOf="@id/inputInterval"
+            android:gravity="end|center_vertical"
+            android:paddingStart="8sp"
+            android:text="@string/textInterval"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/listWordBank"
+            app:layout_constraintEnd_toStartOf="@+id/inputInterval"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkAutoGenerate"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/inputInterval"
+            style="@style/TextGeneral"
+            android:layout_marginEnd="8dp"
+            android:digits="0123456789."
+            android:ems="3"
+            android:hint="@string/intervalHint"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:maxLength="5"
+            android:selectAllOnFocus="false"
+            android:textAlignment="center"
+            android:textColorLink="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/textInterval"
+            app:layout_constraintBottom_toBottomOf="@id/listWordBank"
+            app:layout_constraintEnd_toStartOf="@+id/listWordBank"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textInterval"
+            app:layout_constraintTop_toBottomOf="@id/checkAutoGenerate"
+            app:layout_constraintVertical_bias="1.0"
+            tools:targetApi="lollipop" />
+
+        <CheckBox
+            android:id="@+id/checkMix"
+            style="@style/CheckboxOption"
+            android:layout_below="@id/textChooseBank"
+            android:layout_marginTop="8dp"
+            android:layout_toStartOf="@id/listWordBank"
+            android:text="@string/checkMix"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/listWordBank"
+            app:layout_constraintTop_toBottomOf="@+id/listWordBank" />
+
+        <TextView
+            android:id="@+id/insultField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/transparentOffWhite"
+            android:paddingStart="8sp"
+            android:paddingTop="2sp"
+            android:paddingEnd="8sp"
+            android:paddingBottom="2sp"
+            android:text="@string/insultHint"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/buttonGenerate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkMix" />
+
+        <Button
+            android:id="@+id/buttonGenerate"
+            style="@style/Button"
+            android:layout_width="208sp"
+            android:layout_height="64sp"
+            android:foreground="@drawable/box"
+            android:onClick="onGenerate"
+            android:text="@string/button_generate"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.500"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.9" />
+
+        <Button
+            android:id="@+id/buttonCopyToClipboard"
+            style="@style/Button"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginStart="8sp"
+            android:foreground="@drawable/copy"
+            android:onClick="onPostToClipboard"
+            android:textSize="12sp"
+            android:tooltipText="@string/copyHint"
+            app:layout_constraintStart_toEndOf="@+id/buttonGenerate"
+            app:layout_constraintTop_toTopOf="@id/buttonGenerate" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>
