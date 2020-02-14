@@ -1,4 +1,4 @@
-# InsultGenerator
+# Insult Generator
 
 The Insult Generator is a fun Android App that creates silly, randomized insults using built-in word banks of preset words and phrases. Currently implemented is the Shakespearean work bank, carefully crafted using phrases and grammar from his many works. The app does not contain nor is intended to contain any possibly offensive expletives.
 
